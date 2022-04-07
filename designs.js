@@ -4,7 +4,8 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-
-  // Your code goes here!
-
+  const form = document.getElementById('sizePicker');
+  const height = form.height.value;
+  const width = form.width.value;
+  const table = document.getElementById('pixelCanvas');
 }
