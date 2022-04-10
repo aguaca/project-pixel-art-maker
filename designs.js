@@ -3,6 +3,9 @@
 
 // When size is submitted by the user, call makeGrid()
 const form = document.getElementById('sizePicker');
+const color = document.getElementById('colorPicker');
+color.addEventListener('focusin', () => { color.style.marginBottom = '230px'; });
+color.addEventListener('focusout', () => { color.style.marginBottom = '0px'; });
 function makeGrid(event) {
   event.preventDefault();
   const height = form.height.value;
@@ -18,8 +21,7 @@ function makeGrid(event) {
     for (let w = 0; w < width; w += 1) {
       const td = document.createElement('td');
       const assignColor = () => {
-        const color = document.getElementById('colorPicker').value;
-        td.style.backgroundColor = color;
+        td.style.backgroundColor = color.value;
       };
       td.addEventListener('click', assignColor);
 
