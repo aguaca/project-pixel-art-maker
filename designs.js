@@ -2,6 +2,7 @@
 // Select size input
 
 // When size is submitted by the user, call makeGrid()
+// table shift before color pick
 const form = document.getElementById('sizePicker');
 const color = document.getElementById('colorPicker');
 color.addEventListener('focusin', () => { color.style.marginBottom = '230px'; });
